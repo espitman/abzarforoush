@@ -1,0 +1,84 @@
+.radius (@r) {
+  -webkit-border-radius: unit(@r, px);
+  -moz-border-radius: unit(@r, px);
+  border-radius: unit(@r, px);
+}
+
+.radiusP (@r) {
+  -webkit-border-radius: unit(@r,%);
+  -moz-border-radius: unit(@r,%);
+  border-radius: unit(@r,%);
+}
+
+.rotate(@d) {
+  -ms-transform: rotate(unit(@d, deg));
+  -webkit-transform: rotate(unit(@d, deg));
+  transform: rotate(unit(@d, deg));
+}
+
+.rotateOrigin(@a,@b) {
+  -ms-transform-origin: unit(@a,%) unit(@b,%);
+  -webkit-transform-origin: unit(@a,%) unit(@b,%);
+  transform-origin: unit(@a,%) unit(@b,%);
+}
+
+.animDuration(@s) {
+  -webkit-animation-duration: unit(@s, s);
+  animation-duration: unit(@s, s);
+}
+
+.animDelay(@s) {
+  -webkit-animation-delay: unit(@s, s);
+  animation-delay: unit(@s, s);
+}
+
+.transitionDelay(@s) {
+  -webkit-transition-delay: unit(@s, s);
+  transition-delay: unit(@s, s);
+}
+
+.easing_exponencial() {
+  -webkit-transition-timing-function: cubic-bezier(0.990, 0.005, 1.000, 0.995);
+  -moz-transition-timing-function: cubic-bezier(0.990, 0.005, 1.000, 0.995);
+  -o-transition-timing-function: cubic-bezier(0.990, 0.005, 1.000, 0.995);
+  transition-timing-function: cubic-bezier(0.990, 0.005, 1.000, 0.995);
+}
+
+.animationEasing_exponencial() {
+  -webkit-animation-timing-function: cubic-bezier(0.990, 0.005, 1.000, 0.995);
+  -moz-animation-timing-function: cubic-bezier(0.990, 0.005, 1.000, 0.995);
+  -o-animation-timing-function: cubic-bezier(0.990, 0.005, 1.000, 0.995);
+  animation-timing-function: cubic-bezier(0.990, 0.005, 1.000, 0.995);
+}
+
+.font(@f) {
+  & when (@f = 'yekan') {
+    font-family: 'boumYekan', Arial, tahoma;
+  }
+  & when (@f = 'mitra') {
+    font-family: 'boumMitra', Arial, tahoma;
+  }
+  & when (@f = 'arial') {
+    font-family: Arial, tahoma;
+  }
+}
+
+//==================================
+.responsiveBox(@width,@w,@h) {
+  width: @width;
+  display: inline-block;
+  position: relative;
+  &:after {
+    padding-top: unit((@h/@w)*100,%);
+    display: block;
+    content: '';
+  }
+}
+
+.responsiveBox-content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}

@@ -1,0 +1,13 @@
+@font-face {
+     font-family: 'boumYekan';
+     src: url('boumYekan/boumYekan.eot');
+     src: url('boumYekan/boumYekan.otf') format('opentype');
+     src: local('☺'),
+     local('boumYekan'),
+     url('boumYekan/boumYekan.woff') format('woff'),
+     url('boumYekan/boumYekan.ttf') format('truetype'),
+     url('boumYekan/boumYekan.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
